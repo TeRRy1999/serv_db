@@ -10,7 +10,7 @@ db = SQLAlchemy(app)
 
 class User(db.Model):
 	__tablename__ = "users"
-	id = db.Column(db.Iteger,primary_key = True)
+	id = db.Column(db.Integer,primary_key = True)
 	key = db.Column(db.String(80),unique = True, nullable = False)
 	val = db.Column(db.String(80),unique = True,nullable = False)
 	def __init__(self,k,v):
