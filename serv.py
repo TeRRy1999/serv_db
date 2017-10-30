@@ -29,7 +29,7 @@ def show():
 	users = User.query.all()
 	out = ''
 	for u in users:
-		out += u.key + '' + u.val + '<br>'
+		out += u.key + ' ' + u.val + '<br>'
 	return out
 	
 @app.route('/request',methods=['GET' ,'POST'])
@@ -37,6 +37,8 @@ def processreq():
 	if request.method == 'GET':
 		return "Get key: %s,val: %s" % (request.args.get('key'),request.args.get('val'))
 	else:
+		db.session.add(User(request.form['key'],request.form['val']))
+		db.session.commit()
 		return "Post key: %s,val: %s" % (request.form['key'],request.form['val'])
 
 @app.route('/postpage/')
