@@ -1,0 +1,31 @@
+****hwo to slove who you are ? ****
+
+1.git init
+2.git config user.name "someone"
+3.git config user.email "someone@someplace.com"
+4.git add *
+5.git commit -m "some init msg"
+
+****how to push the file to github****
+1.git add *
+2.git commit -m "some init msg"
+3.git remote add origin https://github.com/TeRRy1999/Flask_Heroku.git
+4.git push -u origin master
+
+****branch****
+1.git push https://github.com/TeRRy1999/Heroku.git master
+	master 代表主要的樹幹 ，branch 是分支
+
+****git status****
+file 還沒被 add ...chech
+
+****git log****
+檢查puhs 的歷史紀錄
+
+****git checkout master****
+切換到主要主幹
+
+****git merge tempbranch****
+將branch merge到主幹
+
+
