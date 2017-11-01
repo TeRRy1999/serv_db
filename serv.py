@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URL'] = os.environ['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
 
@@ -47,5 +47,5 @@ def postpage(pname = "No_name"):
 	return render_template('postform.html',name = pname)
 
 if __name__ == "__main__":
-    app.run(host = '0.0.0.0',debug = true)
+    app.run(host = '0.0.0.0',debug = True)
     
