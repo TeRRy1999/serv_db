@@ -4,9 +4,8 @@ import os
 
 
 app = Flask(__name__)
-
-db_local =   #it works, just not shown here
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL', db_local)
+  
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
 
