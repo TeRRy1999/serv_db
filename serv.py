@@ -30,7 +30,7 @@ def show():
 	users = User.query.all()
 	out = ''
 	for u in users:
-		out += u.key + ' ' + u.val + '<input type="submit" />'
+		out += u.key + ' ' + u.val + '<br>'
 	return out
 	
 @app.route('/request',methods=['GET' ,'POST'])
